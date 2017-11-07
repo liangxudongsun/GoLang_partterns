@@ -1,5 +1,5 @@
 /*
-单例模式
+单例模式-懒汉式（未加锁）
 核心解决：	一个全局使用的类，频繁创建和销毁
 原理:		经常被全局使用的类，在内部自行创建实例，并且保证只有一次创建，
 			对外提供访问这个唯一对象的接口，可以直接访问，无需再创建。
@@ -23,8 +23,9 @@ var (
 )
 
 ///////////////  外部接口 //////////////
-func New() singleton {
+func GetInstance() singleton {
 	once.Do(func() {
+		//只初始化一次
 		instance = singleton{
 			list: make(map[string]string),
 		}

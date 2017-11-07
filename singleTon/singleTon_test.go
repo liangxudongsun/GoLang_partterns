@@ -5,9 +5,8 @@ import (
 )
 
 func TestSingleTon(t *testing.T) {
-	//创建公共实例
-	t.Log("创建单例")
-	single := New()
+	t.Log("获取单例")
+	single := GetInstance()
 	//添加数据
 	t.Log("添加数据key=aa,value=123")
 	single.Add("aa", "123")
