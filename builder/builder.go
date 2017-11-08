@@ -7,13 +7,20 @@
 */
 package builder
 
+import (
+	"fmt"
+)
+
 type Builder interface {
 	Brand(string) Builder
 	Color(string) Builder
+	Name(string) Builder
+	Show()
 }
 
 ///////////////  实例 //////////////
 type Car struct {
+	name  string
 	brand string
 	color string
 }
@@ -25,6 +32,11 @@ func NewCar() Builder {
 	return c
 }
 
+func (c Car) Name(s string) Builder {
+	c.name = s
+	return c
+}
+
 func (c Car) Brand(s string) Builder {
 	c.brand = s
 	return &c
@@ -33,4 +45,14 @@ func (c Car) Brand(s string) Builder {
 func (c Car) Color(s string) Builder {
 	c.color = s
 	return &c
+}
+
+func (c Car) Build() *Car {
+	return &c
+}
+
+func (c Car) Show() {
+	fmt.Println("Car: name=", c.name,
+		" brand=", c.brand,
+		" color=", c.color)
 }

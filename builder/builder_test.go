@@ -1,17 +1,12 @@
 package builder
 
-//import (
-//	"testing"
-//)
+import (
+	"testing"
+)
 
-//func TestSingleTon(t *testing.T) {
-//	t.Log("获取单例")
-//	single := GetInstance()
-//	//添加数据
-//	t.Log("添加数据key=aa,value=123")
-//	single.Add("aa", "123")
-
-//	t.Log("查询key=aa")
-//	v, _ := single.Get("aa")
-//	t.Log("value=", v)
-//}
+func TestBuilder(t *testing.T) {
+	t.Log("获取Builder")
+	b := NewCar()
+	t.Log("构建实例")
+	b.Brand("BMW").Color("YELLOW").Name("MyCar").Show()
+}
