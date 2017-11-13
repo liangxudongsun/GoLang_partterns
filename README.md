@@ -1,15 +1,15 @@
 # Go语言设计模式
 主要的设计模式的Go语言实现。包含示例代码和单元测试。
-Idea源自[go-partterns](https://github.com/tmrts/go-patterns).tmrts的Go-partterns项目提供了设计模式中核心精炼代码。本项目在代码的基础上翻译成中文并进一步完善，符合工程应用。
+Idea源自tmrts的开源项目[go-partterns](https://github.com/tmrts/go-patterns). tmrts的项目提供了设计模式中核心精炼代码。本项目将tmrts代码相关内容上翻译成中文并在此基础上进一步完善，更符合工程应用。
 ## 创建型模式
 
 | 模式 | 描述 | 完成状态 |
 |:-------:|:----------- |:------:|
-| [抽象工厂(Abstract Factory)](/creational/abstract_factory.md) | 提供一个创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类。 | ✔ |
-| [建造者模式（Builder Pattern）](/creational/builder.md) | 通过使用多个简单的对象来逐步构建一个复杂的对象 | ✔ |
-| [工厂模式（Factory Pattern）](/creational/factory.md) | 定义一个创建对象的接口，让其子类自己决定实例化哪一个工厂类，工厂模式使其创建过程延迟到子类进行。 | ✔ |
-| [对象池模式（Object Pool）](/creational/object-pool.md) | 提供了一个对象组的直接访问接口。 | ✘ |
-| [单例模式（Singleton Pattern）](/creational/singleton.md) | 确保只有单个对象被创建，并提供了一种访问其唯一的对象的方式，可以直接访问，不需要实例化该类的对象。 | ✔ |
+| [抽象工厂](/creational/abstract_factory.md) | 提供一个创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类。 | ✔ |
+| [建造者模式](/creational/builder.md) | 通过使用多个简单的对象来逐步构建一个复杂的对象 | ✔ |
+| [工厂模式](/creational/factory.md) | 定义一个创建对象的接口，让其子类自己决定实例化哪一个工厂类，工厂模式使其创建过程延迟到子类进行。 | ✔ |
+| [对象池模式](/creational/object-pool.md) | 定义一个恒定大小对象组，该对小组能够给自行维护，用户可通过接口获取单个对象。 | ✔ |
+| [单例模式](/creational/singleton.md) | 确保只有单个对象被创建，并提供了一种访问其唯一的对象的方式，可以直接访问，不需要实例化该类的对象。 | ✔ |
 
 ## 结构型模式
 
