@@ -46,8 +46,8 @@ go test -v
 
 | 模式 | 描述 | 完成状态 |
 |:-------:|:----------- |:------:|
-| [Wait模式] | 初始创建协程并注册waitgroup，在主线程等待所有子协程退出。 | ✔ |
-| [Cancel模式] | 通过向协程中引入context变量，主线调用cancel向所有协程广播消息退出 | ✔ |
+| [Wait模式](/concurrency/wait.go) | 初始创建协程并注册waitgroup，在主线程等待所有子协程退出。 | ✔ |
+| [Cancel模式](/concurrency/cancel.go) | 通过向协程中引入context变量，主线调用cancel向所有协程广播消息退出 | ✔ |
 
 
 ## 消息模式
